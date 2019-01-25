@@ -1,0 +1,3 @@
+Listener (for reverse shell):
+
+ncat -lvnp <target port>

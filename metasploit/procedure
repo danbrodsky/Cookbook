@@ -1,0 +1,15 @@
+msfconsole
+
+search <target name>
+
+use <full exploit name>
+
+show options
+
+set RHOST <target web server ip>
+
+set RPORT <target web server port>
+
+set session <session_id> (if applicable)
+
+run

@@ -1,0 +1,6 @@
+Metasploit tool for interacting with shells
+
+Useful commands:
+
+- sysinfo (get OS information)
+- migrate <ps_id> (hijack process privileges and configuration)

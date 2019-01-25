@@ -1,0 +1,13 @@
+Dirb (Kali pre-install, attempts a brute-force file enumeration on the target host):
+
+dirb <target_ip> -r (non-recursive)
+
+Gobuster (go-based file enumeration with extra features):
+- apt install golang
+- export GOPATH = /root/go
+- mkdir /root/go
+- go get && go build
+- go run main.go
+- go build
+- ./gobuster -u <ip> -l -w <wordlist-location> -x <file extension> -t 20
+

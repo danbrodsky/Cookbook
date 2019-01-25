@@ -1,0 +1,1 @@
+nmap -sV -Sc -oA nmap-tcp <IP address>

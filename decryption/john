@@ -1,0 +1,4 @@
+John the Ripper
+
+Run against readable-format id_rsa key with:
+./john /root/id_rsa.encrypted --wordlist=/opt/wordlist/rockyou.txt

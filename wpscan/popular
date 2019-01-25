@@ -1,0 +1,1 @@
+wpscan --url <url here> --log

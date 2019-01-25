@@ -1,0 +1,18 @@
+Kill proxy redirect:
+Proxy -> Options -> Add Listener-> Create listener for port with redirect to same port
+
+virtual host routing (might cause page redirect due to recognized host):
+Proxy -> Intercept -> change host to FQDN -> Forward
+
+filetype masking trick (for images):
+copy "magic bytes" from image file -> place filedata after magic bytes -> change filename to have filetype in it -> Repeater request
+
+URL encoding:
+Press Ctrl + U to URL encode request body
+
+token analysis:
+- Intercept login request, then right-click and select 'send to sequencer'
+- let sequencer collect some tokens and then analyze tokens for changes or patterns
+
+Request manipulation:
+Intercept request -> right-click -> send to intruder -> change payload type to target manipulation -> start attack -> check results for varying length where login might be successful

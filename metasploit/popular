@@ -1,0 +1,6 @@
+Use "search suggest" to find possible exploit suggestion tools to use against a shell
+
+Use msfvenom to generate meterpreter payload
+
+make metasploit processes verbose:
+set VERBOSE true
