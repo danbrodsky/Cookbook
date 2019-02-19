@@ -1,0 +1,21 @@
+Python image manipulation:
+python3
+>> import PIL
+>> PIL.Image.open(<filename>)
+>> png = _
+>> import numpy as np
+>> array = np.asarray(png)
+>> # modify rgba array
+>> PIL.Image.fromarray(array).show()
+
+Numpy examples:
+>> # create a masked image
+>> copy = array.copy()
+>> mask = (array[:,:,0] == 255) & (array[:,:,1] == 32) & ...
+>> copy[mask] = [0, 0, 0, 1]
+>> # can also be done using np.all()
+>> mask = np.all(array == (255, 255, 255, 0), axis=-1)
+
+PIL vs f.read():
+- PIL will load in the rgb data, while f.read() will load the binary data as bytes
+- Use PIL for image manipulation and f.read() for data extraction

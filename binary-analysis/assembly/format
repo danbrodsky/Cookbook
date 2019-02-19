@@ -1,0 +1,29 @@
+Intel x86:
+- *.S file extension
+
+header:
+----------------------------
+.intel_syntax noprefix
+.bits 32
+
+.global <function-name>
+
+function:
+        ...
+        mov dst, BYTE PTR [ebp+0x8] (src) 
+        ...
+----------------------------
+NASM X86:
+- *.nasm file extension
+
+header:
+----------------------------
+section .text
+global function
+
+function:
+        ...
+        mov  dst, BYTE [ebp+0x8] (src)
+        ...
+----------------------------
+

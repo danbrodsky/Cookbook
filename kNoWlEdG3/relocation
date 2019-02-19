@@ -1,0 +1,28 @@
+Global Offset Table (.got):
+    - table of offsets for external symbols
+
+Procedure Linked Table (.plt):
+    - stubs to look up addresses in GOT (.got.plt)
+    - if address not found then tells linker to look up address
+
+GOT for PLT (.got.plt):
+    - addresses stored from .plt lookup
+
+PLT for GOT (.plt.got):
+    - jumps to first entry of GOT
+    - not used, more for consistency
+
+<function>@plt:
+    - linker for this function to its actual body
+    - contains a function pointer to this function's location in linked libraries
+    - function pointer can be overwritten to change function to any address
+
+<function>@got (function.got):
+    - function pointer to address of function within library
+    - changes based on address at which library is loaded into address space
+    - address of function in library can be obtained by viewing value of function pointer at runtime
+
+Executable Linkable Format (ELF):
+    - file header defines whether to use 32 or 64-bit
+    - program header defines how to create process image
+    - can read ELF headers with "readelf -h <filename>"

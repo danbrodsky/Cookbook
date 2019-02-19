@@ -1,0 +1,6 @@
+Server-side template injection (SSTI)
+
+Python (Flask):
+{{ 7 * 7 }} (for discovery)
+https://pequalsnp-team.github.io/cheatsheet/flask-jinja2-ssti (for enumeration)
+https://github.com/epinna/tplmap.git (tplmap SSTLI tool)

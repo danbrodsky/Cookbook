@@ -11,3 +11,18 @@ transfer device to local disk and check for embedded text:
 dcfldd if=<mounted_device> | gzip -1 -" | dcfldd of=<gzip_target_name>
 gunzip -d <gzip_target>
 binwalk -Me <target_file>
+
+Mounting disk image:
+sudo mount <filename>.dd /mnt/<new_dir>
+
+Image recovery:
+sudo photorec <target_disk_image>
+fdisk -l <target_disk_image> (if partition type required)
+
+Get filesystem information:
+fsck.ext4 <filesystem> (diagnostics check)
+file <filesystem> (type check)
+sudo fdisk -l <filesystem> (partition check)
+
+Filesystem debugging:
+debugfs <filesystem> (shows additional system info for files)

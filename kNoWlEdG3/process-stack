@@ -1,0 +1,12 @@
+Process stack layout:
+
+addr-offset
+0x00000000  : eax,ebx  - saved registers for process <<--- %esp
+...
+0x00000008  : ebp-0x8  - local var2
+0x00000012  : ebp-0x4  - local var1
+0x00000016  : ebp      - saved ebp register <<--- %ebp
+0x00000020  : ebp+0x4  - arg2
+0x00000024  : ebp+0x8  - arg1
+0x00000028  : ebp+0x12 - ret_addr
+0x00000032  : ebp+0x16 - func_start

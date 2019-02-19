@@ -1,0 +1,5 @@
+hashing vs encryption:
+- hashing tends to have set length
+- encryption grows with data size (block ciphers)
+- stream ciphers generate much larger amount of data (regardless of input)
+- electronic codebook typically has patterns in ciphertext

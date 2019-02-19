@@ -1,0 +1,2 @@
+Convert assembly code to object file:
+nasm -f elf32 <asm-file> -o asmAsObject.o

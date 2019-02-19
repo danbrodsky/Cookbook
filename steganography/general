@@ -1,0 +1,11 @@
+Basic steganography:
+-RGB values of pixels in image are normalized to either even or odd values
+-secret is converted to binary and is incremented to an arbitrary part of the pixel array
+
+reading hexvalues of file:
+hexedit <filename>
+(look for high-randomization of hex values, indicates encryption was used)
+
+
+reading metadata of image file:
+exiftool <filename>

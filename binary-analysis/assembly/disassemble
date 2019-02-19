@@ -1,0 +1,19 @@
+disassemble single function in gdb:
+gdb -batch -ex 'file <file-location>' -ex 'disassemble <function-name>'
+
+disassemble whole file using objdump:
+objdump -d <filename>
+objdump -T <filename> (for lib files)
+
+hexediting bytecode:
+bless <filename>
+replace target hex value of target asm from objdump w/ new value
+
+getting all function labels:
+nm ./<filename> | grep "T"
+
+get stack trace of program:
+strace -t <filename> | less
+
+convert between asm and opcode:
+https://defuse.ca/online-x86-assembler.htm

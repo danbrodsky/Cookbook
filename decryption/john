@@ -2,3 +2,7 @@ John the Ripper
 
 Run against readable-format id_rsa key with:
 ./john /root/id_rsa.encrypted --wordlist=/opt/wordlist/rockyou.txt
+
+Unshadow /etc/passwd file:
+umask 077
+unshadow /etc/passwd /etc/shadow > mypasswd

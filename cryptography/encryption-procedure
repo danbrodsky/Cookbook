@@ -1,0 +1,31 @@
+Cipher block chaining:
+- pass in an IV, key and plaintext data as block
+- take first block and key as byte array
+- payload = xor(IV, block1)
+- nextIV, encBlock1 = xor(block1, key)
+- repeat
+
+Electronic Codebook:
+- take first 16 char from plaintext as block1
+- encBlock1 = block_encrypt(block1, key)
+- repeat
+
+Counter mode:
+- counter = 0 as 64-bit long
+- IV = 64-bit rand
+for every block:
+- encBlock = xor(block_encrypt(key, IV+counter), plaintext)
+- counter++
+
+RSA Encryption:
+- select 2 primes: q and p
+- compute n = q * p
+- select e, where e is co-prime to n
+- compute totient(n) = (q-1)(p-1)
+- compute d = modular_inverse(e, totient(n))
+(modular_inverse(x,z) is a value y where x*y mod z = 1)
+- encrypt(t) = t**e mod n
+- decrypt(c) = c**d mod n
+https://github.com/Ganapati/RsaCtfTool.git (for weak RSA cracking)
+http://factordb.com/ (prime number factorization)
+https://www.alpertron.com.ar/ECM.HTM (prime factorization using ECM)

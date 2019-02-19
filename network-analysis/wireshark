@@ -1,0 +1,8 @@
+load in tcp dump (*.pcap) file:
+tshark -r <pcap_file> -Y 'frame contains "<search_string>"' -w <output_file>
+
+Navigating in wireshark-gtk:
+-open *.pcap file
+-filter out unneeded traffic
+-edit->find packet (select find by string, packet details)
+-right-click target packet, select "follow TCP/HTTP stream"

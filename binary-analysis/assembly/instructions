@@ -1,0 +1,17 @@
+cmpl - compare unsigned integers
+ex)
+cmpl dest, source
+CF = dest < source
+ZF = dest == source
+
+ja (jump if above) - jump if unsigned first operand is greater than second operand in last cmp instruction
+
+imul - integer multiply
+
+mov    <array>(,<index>,4),<register> - store array[index] in register
+
+ax - lower 16 bits of %eax
+al - lower 8 bits of %eax
+ah - lower bits 8-15 of %eax
+
+sal - shift arithmetic left (<<)
