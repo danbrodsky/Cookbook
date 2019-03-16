@@ -15,3 +15,10 @@ al - lower 8 bits of %eax
 ah - lower bits 8-15 of %eax
 
 sal - shift arithmetic left (<<)
+
+lea (load effective address)- load pointer into register
+
+
+<arg1>:<arg2> - concatenate arg1 with arg2
+
+nop - 1-byte instruction (does nothing)

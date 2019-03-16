@@ -1,3 +1,11 @@
+Ettercap (for MitM analysis on local traffic):
+ettercap -T -q -i tap0 -M arp:remote /<addr1>/ /<addr2>/
+
+Etterfilter (for capturing and modifying network packets in transit):
+etterfilter <filter-file> -o <output-file>
+ettercap -T -q -i tap0 -M arp:remote -F <output-file> /<addr1>/ /<addr2/
+
+Wireshark:
 load in tcp dump (*.pcap) file:
 tshark -r <pcap_file> -Y 'frame contains "<search_string>"' -w <output_file>
 
