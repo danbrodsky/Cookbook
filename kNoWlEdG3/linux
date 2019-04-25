@@ -1,0 +1,15 @@
+Important filesystem directories:
+
+/etc/cron.d - contains scheduled processes
+
+/proc - information for all processes
+/proc/$id/maps - virtual memory used by process
+
+/var/lib/systemd/coredump/ - location of coredumps
+/usr/share/applications/ - freedesktop.org application listings
+
+
+
+Arch specific:
+makepkg -sri (build + install package)
+makepkg -Acs (build package tar file)

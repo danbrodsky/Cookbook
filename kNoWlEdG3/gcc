@@ -1,0 +1,6 @@
+GNU Compiler Collection
+
+Flag types:
+CFLAGS - compiler flags
+LDFLAGS - linker flags
+CXXFLAGS - C++ compiler flags

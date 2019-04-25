@@ -1,9 +1,8 @@
-Sudo escalate:
+Basic privilege escalation discovery:
+https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
 
-sudo -l (to find possible commands run at root level)
-sudo ${root_command} bash to open root shell
 
-Base command hijacking:
+Library call hijacking:
 
 - find file that executes with root privileges
 - run gdb <file-name> and step through until instruction found that makes system call, then 'x/s <mem-location>' from a memory location stated before the sys call
@@ -11,4 +10,3 @@ Base command hijacking:
 - create an executable bash file (echo "#!/bin/sh" >> <command>;echo "/bin/sh" >> <command>; chmod +x <command>)
 - 'export PATH = <current-dir> : $PATH' to set current directory as highest priority for looking for executables when running commands
 - run the root file and a root shell should open
-

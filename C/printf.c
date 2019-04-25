@@ -33,6 +33,9 @@ printf("CAAAAAAAA%00000x%12$hp%00000x%13$hp"); // for finding the correct stack 
 char *vuln = "example";
 scanf("%s", vuln);
 
+// can leak libc address using GOT entry and printf/scanf/puts
+libc_ptr = 0x1337c0de // pointer from GOT entry into libc
+printf("%s\n", libc_ptr);
 
 }
 // http://codearcana.com/posts/2013/05/02/introduction-to-format-string-exploits.html (for future reference)

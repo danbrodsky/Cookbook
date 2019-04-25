@@ -27,6 +27,7 @@ int asmSnippet() {
 #include <stdio.h>
 extern int function(int arg);
 
+
 int main(void) {
 
 	printf("%x\n", function(0));
@@ -44,9 +45,10 @@ int main(void) {
 
 char shellcode[] = "<target-shellcode>";
 
-int main2(int argc, char **argv) {
+void main2(int argc, char **argv) {
     int (*fp) (int);
     fp = (void *)shellcode;
     printf("%x\n", fp(0));
 }
+
 // > gcc runShellcode.c -o runShellcode -fno-stack-protector -z execstack -no-pie -m32
